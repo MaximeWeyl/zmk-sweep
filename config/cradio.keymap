@@ -15,7 +15,7 @@
 #define MAC 0
 #define NAV 1
 #define NUM 2
-#define LEF 3
+#define SYM 3
 #define TRI 4
 
 / {
@@ -35,7 +35,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NAV LEF>;
+            if-layers = <NAV SYM>;
             then-layer = <TRI>;
         };
     };
@@ -54,7 +54,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF ESC  &kp SPACE     &lt NUM BSPC   &lt NAV TAB
+                                           &lt SYM ESC  &kp SPACE     &lt NUM BSPC   &lt NAV TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -62,14 +62,14 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │  UP      │          │          │   │          │          │ UP       │          │          │
-            &trans    &trans     &kp UP     &trans     &trans           &trans     &trans     &kp UARW   &trans      &trans
+        //│          │          │  UP      │          │          │   │          │  HOME     │ UP       │  END     │  PAGE DN  │
+            &trans    &trans     &kp UP     &trans     &trans           &trans    &kp HOME   &kp UARW   &kp END    &PG_DN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   |          │ LEFT     │ DOWN     │ RIGHT    │  8       │  
-            HRML(DEL,  LARW,      DARW,     RARW)       &trans          &trans    &kp LARW   &kp DARW   &kp RARW    &kp N8  
+        //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   |          │ LEFT     │ DOWN     │ RIGHT    │  PAGE UP │  
+            HRML(DEL,  LARW,      DARW,     RARW)       &trans          &trans    &kp LARW   &kp DARW   &kp RARW    &kp PG_UP  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &trans    &trans     &trans     &trans      &trans           &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
+        //│          │          │          │          │          │   │          │          │          │          |          │
+            &trans    &trans     &trans     &trans      &trans           &trans   &trans      &trans   &trans      &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans          &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -79,8 +79,8 @@
         num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ 1        │  2       │  3       │  4       │  5       │   │           │ 7        │ 8       │ 9        │   0      │
-            &trans    &trans     &trans     &trans     &trans          &trans    &kp N7     &kp N8    &kp N9      &kp N0
+        //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8       │ 9        │   0      │
+            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6    &kp N7     &kp N8    &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   |          │ 4        │ 5        │ 6        │  0       │  
             HRML(DEL,  CAPS,      PSCRN,     INS)       &trans          &trans    &kp N4   &kp N5       &kp N6    &kp N0  
@@ -92,8 +92,11 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+        
+        
+         
 
-        left_layer {
+        symbol_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  &       │  *       │  `       │  ~       │

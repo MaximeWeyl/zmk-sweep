@@ -62,11 +62,11 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │  UP      │          │          │   │          │  HOME     │ UP       │  END     │  PAGE UP  │
-            &trans    &trans     &kp UP     &trans     &trans           &trans    &kp HOME   &kp UARW   &kp END    &kp PG_UP
+        //│          │          │  UP      │          │          │   │ SCROLLUP │  HOME     │ UP       │  END     │  PAGE UP│
+            &trans    &trans     &kp UP     &trans     &trans      &kp C_AC_SCROLL_UP &kp HOME&kp UARW  &kp END    &kp PG_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   |          │ LEFT     │ DOWN     │ RIGHT    │ PAGE DOWN│
-            HRML(DEL,  LARW,      DARW,     RARW)       &trans          &trans    &kp LARW   &kp DARW   &kp RARW   &kp PG_DN
+        //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   | SCROLLDN │ LEFT     │ DOWN     │ RIGHT    │ PAGE DOWN│
+            HRML(DEL,  LARW,      DARW,     RARW)   &trans   &kp C_AC_SCROLL_DOWN &kp LARW &kp DARW   &kp RARW   &kp PG_DN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          |          │
             &trans    &trans     &trans     &trans      &trans           &trans   &trans      &trans   &trans      &trans 

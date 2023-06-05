@@ -40,6 +40,29 @@
         };
     };
 
+    macros {
+        eacc1: eacc1 {
+            label = "eacc1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp e &kp e>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+    
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_e_accent_1 {
+            timeout-ms =, <50>;
+            key-positions = <2 3>;
+            bindings = <&eacc1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {

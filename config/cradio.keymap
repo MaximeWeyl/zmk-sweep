@@ -57,7 +57,7 @@
         compatible = "zmk,combos";
         
         combo_e_accent_1 {
-            timeout-ms =, <50>;
+            timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&eacc1>;
         };

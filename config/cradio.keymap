@@ -88,6 +88,31 @@
                 ; 
         };
 
+ 
+        ugrave: ugrave {
+            label = "ugrave";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp U>
+                ; 
+        };
+
+        ucirco: ucirco {
+            label = "ucirco";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp I>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp U> 
+                ; 
+        };
+
     };
     
     combos {
@@ -115,6 +140,18 @@
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&cced>;
+        };
+
+        combo_u_grave {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&ugrave>;
+        };
+
+        combo_u_circo {
+            timeout-ms = <50>;
+            key-positions = <6 9>;
+            bindings = <&ucirco>;
         };
     };
 

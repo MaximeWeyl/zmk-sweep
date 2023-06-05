@@ -76,6 +76,18 @@
                 , <&macro_tap &kp E> 
                 ; 
         };
+ 
+        cced: cced {
+            label = "cced";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LALT>                 
+                ; 
+        };
+
     };
     
     combos {
@@ -97,6 +109,12 @@
             timeout-ms = <50>;
             key-positions = <0 2>;
             bindings = <&eacc3>;
+        };
+
+        combo_c_cedille {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&cced>;
         };
     };
 

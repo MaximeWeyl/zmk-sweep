@@ -64,6 +64,18 @@
                 , <&macro_tap &kp E>
                 ; 
         };
+ 
+         eacc3: eacc3 {
+            label = "eacc3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp I>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp E> 
+                ; 
+        };
     };
     
     combos {
@@ -79,6 +91,12 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&eacc2>;
+        };
+
+        combo_e_accent_3 {
+            timeout-ms = <50>;
+            key-positions = <0 2>;
+            bindings = <&eacc3>;
         };
     };
 

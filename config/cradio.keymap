@@ -12,6 +12,18 @@
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
+// Hold / Press tap dance 
+#define PTD(hold, tap) \
+        tap_dance_c_macro { \
+            compatible = "zmk,behavior-tap-dance"; \
+            label = "TAP_DANCE_MOD_TAP"; \
+            #binding-cells = <0>; \ 
+            tapping-term-ms = <200>; \
+            bindings = <&lt hold tap>, <&kp tap>; \
+        };
+
+
+
 #define MAC 0
 #define NAV 1
 #define NUM 2
@@ -30,6 +42,8 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        ptd_num_bspc: PTD(NUM, BSPC)
     };
 
     conditional_layers {
@@ -187,7 +201,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt SYM ESC  &kp SPACE     &lt NUM BSPC   &lt NAV TAB
+                                           &lt SYM ESC  &kp SPACE     &ptd_num_bspc   &lt NAV TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

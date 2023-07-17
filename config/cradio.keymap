@@ -162,6 +162,17 @@
                 , <&macro_tap &kp A> 
                 ; 
         };
+
+        agrave_modtap: agrave_modtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "agrave_modtap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&agrave>;
+        };
     };
     
     combos {
@@ -218,7 +229,7 @@
         combo_a_grave {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            bindings = <&agrave>;
+            bindings = <&agrave_modtap I O>;
         };
 
         combo_simple_quote {

@@ -218,7 +218,7 @@
         combo_a_grave {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            bindings = <&agrave>;
+            bindings = <&trans>;
         };
 
         combo_simple_quote {

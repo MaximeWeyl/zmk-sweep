@@ -369,13 +369,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
         //│          │          │          │           │            │   │             │           │          │           │           │
-            &tans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
+            &trans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │          │          │           │            │   │             │           │          │           │           │
-            &tans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
+            &trans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │          │          │           │            │   │             │           │          │           │           │
-            &tans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
+            &trans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯

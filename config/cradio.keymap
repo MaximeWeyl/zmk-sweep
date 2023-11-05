@@ -17,7 +17,7 @@
 #define NUM 2
 #define SYM 3
 #define TRI 4
-#define MOUS1 macos_mousekeys_layer_1
+#define MOUS1 5
 
 / {
     behaviors {

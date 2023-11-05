@@ -378,7 +378,7 @@
             &trans      &trans     &trans     &trans      &trans           &trans        &trans       &trans    &trans      &trans 
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
         //                                 | LEAVE LAYER|           |   |            |           |
-                                              &tog MOUS1     &trans         &trans     &trans
+                                            &macosmouskeys  &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };

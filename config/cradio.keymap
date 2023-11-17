@@ -19,6 +19,8 @@
 #define TRI 4
 #define MOUS1 5
 
+#define COMBO_LAYER_TIMEOUT_MS 30
+
 / {
     behaviors {
         ht: hold_tap {
@@ -270,8 +272,8 @@
         };
 
         combo_mouse_layer {
-            timeout-ms = <50>;
-            key-positions = <31 3>;
+            timeout-ms = <COMBO_LAYER_TIMEOUT_MS>;
+            key-positions = <30 3>;
             bindings = <&macosmouskeys>;
         };
     };

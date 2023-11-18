@@ -18,6 +18,7 @@
 #define SYM 3
 #define TRI 4
 #define MOUS1 5
+#define WARPD 6
 
 #define COMBO_LAYER_TIMEOUT_MS 30
 
@@ -273,8 +274,14 @@
 
         combo_mouse_layer {
             timeout-ms = <COMBO_LAYER_TIMEOUT_MS>;
-            key-positions = <30 3>;
+            key-positions = <3 30>;
             bindings = <&macosmouskeys>;
+        };
+
+        combo_warpd_layer {
+            timeout-ms = <COMBO_LAYER_TIMEOUT_MS>;
+            key-positions = <3 29>;
+            bindings = <&tog WARPD>;
         };
     };
 
@@ -382,6 +389,24 @@
         //                                 | LEAVE LAYER|           |   |            |           |
                                             &macosmouskeys  &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+            >;
+        };
+
+    warpd_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   ENTER  │
+            &kp A       &kp S      &kp D      &kp F     &kp G          &kp H      &kp J       &kp K      &kp L     &kp ENTER
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 | LEAVE LAYER|         |   |            |           |
+                                            &tog WARPD     &trans         &trans     &trans
+        //                                  ╰───────────┴─────────╯   ╰──────────┴────────────╯
             >;
         };
     };

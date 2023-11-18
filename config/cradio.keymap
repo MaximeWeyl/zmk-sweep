@@ -274,13 +274,13 @@
 
         combo_mouse_layer {
             timeout-ms = <COMBO_LAYER_TIMEOUT_MS>;
-            key-positions = <3 30>;
+            key-positions = <30 3>;
             bindings = <&macosmouskeys>;
         };
 
         combo_warpd_layer {
             timeout-ms = <COMBO_LAYER_TIMEOUT_MS>;
-            key-positions = <3 29>;
+            key-positions = <30 2>;
             bindings = <&tog WARPD>;
         };
     };

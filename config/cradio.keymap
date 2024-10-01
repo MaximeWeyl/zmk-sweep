@@ -21,7 +21,7 @@
 #define WARPD 6
 
 #define COMBO_LAYER_TIMEOUT_MS 30
-#define COMBO_TIMEOUT_MS 10
+#define COMBO_TIMEOUT_MS 20
 
 / {
     behaviors {

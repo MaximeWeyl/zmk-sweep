@@ -22,7 +22,8 @@
 #define COMBO_TIMEOUT_MS 2000
 
 / {
-    behaviors {
+    behaviors 
+    {
         ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";

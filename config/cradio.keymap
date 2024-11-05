@@ -19,7 +19,7 @@
 #define TRI 4
 
 #define COMBO_LAYER_TIMEOUT_MS 30
-#define COMBO_TIMEOUT_MS 2000
+#define COMBO_TIMEOUT_MS 40
 
 / {
     behaviors 

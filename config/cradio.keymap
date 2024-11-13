@@ -189,6 +189,11 @@
             key-positions = <2 3 26>;
             bindings = <&eacc1>;
         };
+        combo_e_accent_1B {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <2 26 27>;
+            bindings = <&eacc1>;
+        };
       
         combo_e_accent_2 {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -196,9 +201,21 @@
             bindings = <&eacc2>;
         };
 
+        combo_e_accent_2B {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <3 26 27>;
+            bindings = <&eacc2>;
+        };
+
         combo_e_accent_3 {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <0 2 26>;
+            bindings = <&eacc3>;
+        };
+
+        combo_e_accent_3B {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <1 26 27>;
             bindings = <&eacc3>;
         };
 

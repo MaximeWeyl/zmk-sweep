@@ -184,11 +184,11 @@
     combos {
         compatible = "zmk,combos";
         
-        combo_e_accent_1 {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <2 3 26>;
-            bindings = <&eacc1>;
-        };
+//        combo_e_accent_1 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <2 3 26>;
+//            bindings = <&eacc1>;
+//        };
 
         combo_e_accent_1B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -196,11 +196,11 @@
             bindings = <&eacc1>;
         };
       
-        combo_e_accent_2 {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <1 2 26>;
-            bindings = <&eacc2>;
-        };
+//        combo_e_accent_2 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <1 2 26>;
+//            bindings = <&eacc2>;
+//        };
 
         combo_e_accent_2B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -208,11 +208,11 @@
             bindings = <&eacc2>;
         };
 
-        combo_e_accent_3 {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <0 2 26>;
-            bindings = <&eacc3>;
-        };
+//        combo_e_accent_3 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <0 2 26>;
+//            bindings = <&eacc3>;
+//        };
 
         combo_e_accent_3B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -220,11 +220,11 @@
             bindings = <&eacc3>;
         };
 
-        combo_c_cedille {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <22 23 26>;
-            bindings = <&cced>;
-        };
+//        combo_c_cedille {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <22 23 26>;
+//            bindings = <&cced>;
+//        };
 
         combo_c_cedilleB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -232,11 +232,11 @@
             bindings = <&cced>;
         };
 
-        combo_u_grave {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <6 7 23>;
-            bindings = <&ugrave>;
-        };
+//        combo_u_grave {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <6 7 23>;
+//            bindings = <&ugrave>;
+//        };
 
         combo_u_graveB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -244,11 +244,11 @@
             bindings = <&ugrave>;
         };
 
-        combo_u_circo {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <6 9 23>;
-            bindings = <&ucirco>;
-        };
+//        combo_u_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <6 9 23>;
+//            bindings = <&ucirco>;
+//        };
 
         combo_u_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -256,11 +256,11 @@
             bindings = <&ucirco>;
         };
 
-        combo_i_circo {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <7 9 23>;
-            bindings = <&icirco>;
-        };
+//        combo_i_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <7 9 23>;
+//            bindings = <&icirco>;
+//        };
 
         combo_i_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -268,11 +268,11 @@
             bindings = <&icirco>;
         };
 
-         combo_o_circo {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <8 9 23>;
-            bindings = <&ocirco>;
-        };
+//         combo_o_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <8 9 23>;
+//            bindings = <&ocirco>;
+//       };
 
          combo_o_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -280,11 +280,11 @@
             bindings = <&ocirco>;
         };
 
-        combo_a_grave {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <10 11 26>;
-            bindings = <&agrave_modtap I O>;
-        };
+//        combo_a_grave {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <10 11 26>;
+//            bindings = <&agrave_modtap I O>;
+//        };
 
         combo_a_graveB{
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -292,11 +292,11 @@
             bindings = <&agrave_modtap I O>;
         };
 
-        combo_simple_quote {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <16 17 23>;
-            bindings = <&kp SQT>;
-        };
+//        combo_simple_quote {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <16 17 23>;
+//            bindings = <&kp SQT>;
+//        };
 
         combo_simple_quoteB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -304,11 +304,11 @@
             bindings = <&kp SQT>;
         };
 
-        combo_double_quote {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <26 27 23>;
-            bindings = <&kp DQT>;
-        };
+//        combo_double_quote {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <26 27 23>;
+//            bindings = <&kp DQT>;
+//        };
 
         combo_double_quoteB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -316,11 +316,11 @@
             bindings = <&kp DQT>;
         };
 
-        combo_dash {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <16 18 23>;
-            bindings = <&kp MINUS>;
-        };
+//        combo_dash {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <16 18 23>;
+//            bindings = <&kp MINUS>;
+//        };
 
         combo_dashB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
@@ -328,11 +328,11 @@
             bindings = <&kp MINUS>;
         };
 
-        combo_underscore {
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <26 28 23>;
-            bindings = <&kp UNDER>;
-        };
+//        combo_underscore {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <26 28 23>;
+//            bindings = <&kp UNDER>;
+//        };
 
         combo_underscoreB {
             timeout-ms = <COMBO_TIMEOUT_MS>;

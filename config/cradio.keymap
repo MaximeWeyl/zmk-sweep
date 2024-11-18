@@ -19,10 +19,11 @@
 #define TRI 4
 
 #define COMBO_LAYER_TIMEOUT_MS 30
-#define COMBO_TIMEOUT_MS 20
+#define COMBO_TIMEOUT_MS 40
 
 / {
-    behaviors {
+    behaviors 
+    {
         ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -183,81 +184,159 @@
     combos {
         compatible = "zmk,combos";
         
-        combo_e_accent_1 {
+//        combo_e_accent_1 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <2 3 26>;
+//            bindings = <&eacc1>;
+//        };
+
+        combo_e_accent_1B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <2 3>;
+            key-positions = <2 26 27>;
             bindings = <&eacc1>;
         };
       
-        combo_e_accent_2 {
+//        combo_e_accent_2 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <1 2 26>;
+//            bindings = <&eacc2>;
+//        };
+
+        combo_e_accent_2B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <1 2>;
+            key-positions = <3 26 27>;
             bindings = <&eacc2>;
         };
 
-        combo_e_accent_3 {
+//        combo_e_accent_3 {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <0 2 26>;
+//            bindings = <&eacc3>;
+//        };
+
+        combo_e_accent_3B {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <0 2>;
+            key-positions = <1 26 27>;
             bindings = <&eacc3>;
         };
 
-        combo_c_cedille {
+//        combo_c_cedille {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <22 23 26>;
+//            bindings = <&cced>;
+//        };
+
+        combo_c_cedilleB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <22 23>;
+            key-positions = <22 26 27>;
             bindings = <&cced>;
         };
 
-        combo_u_grave {
+//        combo_u_grave {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <6 7 23>;
+//            bindings = <&ugrave>;
+//        };
+
+        combo_u_graveB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <6 7>;
+            key-positions = <6 22 23>;
             bindings = <&ugrave>;
         };
 
-        combo_u_circo {
+//        combo_u_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <6 9 23>;
+//            bindings = <&ucirco>;
+//        };
+
+        combo_u_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <6 9>;
+            key-positions = <7 22 23>;
             bindings = <&ucirco>;
         };
- 
-        combo_i_circo {
+
+//        combo_i_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <7 9 23>;
+//            bindings = <&icirco>;
+//        };
+
+        combo_i_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <7 9>;
+            key-positions = <7 22 23>;
             bindings = <&icirco>;
         };
- 
-         combo_o_circo {
+
+//         combo_o_circo {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <8 9 23>;
+//            bindings = <&ocirco>;
+//       };
+
+         combo_o_circoB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <8 9>;
+            key-positions = <8 22 23>;
             bindings = <&ocirco>;
         };
 
-        combo_a_grave {
+//        combo_a_grave {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <10 11 26>;
+//            bindings = <&agrave_modtap I O>;
+//        };
+
+        combo_a_graveB{
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <10 11>;
+            key-positions = <10 26 27>;
             bindings = <&agrave_modtap I O>;
         };
 
-        combo_simple_quote {
+//        combo_simple_quote {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <16 17 23>;
+//            bindings = <&kp SQT>;
+//        };
+
+        combo_simple_quoteB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <16 17>;
+            key-positions = <16 22 23>;
             bindings = <&kp SQT>;
         };
 
-        combo_double_quote {
+//        combo_double_quote {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <26 27 23>;
+//            bindings = <&kp DQT>;
+//        };
+
+        combo_double_quoteB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <26 27>;
+            key-positions = <26 22 23>;
             bindings = <&kp DQT>;
         };
 
-        combo_dash {
+//        combo_dash {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <16 18 23>;
+//            bindings = <&kp MINUS>;
+//        };
+
+        combo_dashB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <16 18>;
+            key-positions = <17 22 23>;
             bindings = <&kp MINUS>;
         };
 
-        combo_underscore {
+//        combo_underscore {
+//            timeout-ms = <COMBO_TIMEOUT_MS>;
+//            key-positions = <26 28 23>;
+//            bindings = <&kp UNDER>;
+//        };
+
+        combo_underscoreB {
             timeout-ms = <COMBO_TIMEOUT_MS>;
-            key-positions = <26 28>;
+            key-positions = <27 22 23>;
             bindings = <&kp UNDER>;
         };
     };

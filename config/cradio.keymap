@@ -147,7 +147,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>
-                , <&macro_tap &kp GRAVE>
+                , <&macro_tap &ocirco>
                 , <&macro_release &kp LALT>
                 , <&macro_tap &kp A>
                 ;

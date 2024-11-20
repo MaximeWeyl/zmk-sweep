@@ -105,7 +105,7 @@
 
         icirco: icirco {
             label = "icirco";
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macroOO";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>

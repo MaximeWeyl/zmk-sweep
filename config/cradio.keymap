@@ -139,18 +139,6 @@
                 , <&macro_release &kp LALT>
                 , <&macro_tap &kp O> 
                 ; 
-        };  
-
-        agrave: agrave {
-            label = "agrave";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp GRAVE>
-                , <&macro_release &kp LALT>
-                , <&macro_tap &kp A> 
-                ; 
         };
     };
     
@@ -162,6 +150,18 @@
 //            key-positions = <2 3 26>;
 //            bindings = <&eacc1>;
 //        };
+
+        agrave: agrave {
+            label = "agrave";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp A>
+                ;
+        };
 
         combo_e_accent_1B {
             timeout-ms = <COMBO_TIMEOUT_MS>;

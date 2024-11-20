@@ -22,6 +22,20 @@
 #define COMBO_TIMEOUT_MS 40
 
 / {
+    behaviors 
+    {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
+
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -387,19 +401,5 @@
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };
-    };
-
-    behaviors
-    {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
-
     };
 };

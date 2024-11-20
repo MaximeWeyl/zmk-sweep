@@ -31,7 +31,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
 
@@ -153,32 +152,6 @@
                 , <&macro_tap &kp A> 
                 ; 
         };
-
-        shift_alt: shift_alt {
-            label = "shift_alt";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>
-                ; 
-        };
-
-
-        agrave_modtap: agrave_modtap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "agrave_modtap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&shift_alt>, <&agrave>;
-        };
     };
     
     combos {
@@ -283,13 +256,13 @@
 //        combo_a_grave {
 //            timeout-ms = <COMBO_TIMEOUT_MS>;
 //            key-positions = <10 11 26>;
-//            bindings = <&agrave_modtap I O>;
+//            bindings = <&agrave I O>;
 //        };
 
         combo_a_graveB{
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <10 26 27>;
-            bindings = <&agrave_modtap I O>;
+            bindings = <&agrave I O>;
         };
 
 //        combo_simple_quote {
@@ -364,7 +337,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │  UP      │          │          │   │ SCROLLUP │  HOME     │ UP       │  END     │  PAGE UP│
-            &trans    &trans     &kp UP     &trans     &trans        &kp LG(PG_UP) &kp HOME&kp UARW  &kp END    &kp PG_UP
+            &trans    &trans     &kp UP     &trans     &trans        &kp LG(PG_UP) &kp HOME &kp UARW  &kp END    &kp PG_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   | SCROLLDN │ LEFT     │ DOWN     │ RIGHT    │ PAGE DOWN│
             HRML(DEL,  LARW,      DARW,     RARW)   &trans           &kp LG(PG_DN) &kp LARW &kp DARW   &kp RARW   &kp PG_DN

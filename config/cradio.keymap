@@ -363,19 +363,6 @@
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };
-
-                    icirco: icirco {
-                        label = "icirco";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                            = <&macro_press &kp LALT>
-                            , <&macro_tap &kp I>
-                            , <&macro_release &kp LALT>
-                            , <&macro_tap &kp I>
-                            ;
-                    };
-
     };
 
     ht: hold_tap {
@@ -387,6 +374,18 @@
         quick-tap-ms = <150>;
         bindings = <&kp>, <&kp>;
     };
+
+            icirco: icirco {
+                label = "icirco";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LALT>
+                    , <&macro_tap &kp I>
+                    , <&macro_release &kp LALT>
+                    , <&macro_tap &kp I>
+                    ;
+            };
 
             ocirco: ocirco {
                 label = "ocirco";

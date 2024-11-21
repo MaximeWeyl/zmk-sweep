@@ -337,7 +337,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │  UP      │          │          │   │ SCROLLUP │  HOME     │ UP       │  END     │  PAGE UP│
-            &trans    &trans     &kp UP     &trans     &trans        &kp LG(PG_UP) &kp HOME &kp UARW  &kp END    &kp PG_UP
+            &trans    &trans     &kp UARW     &trans     &trans        &kp LG(PG_UP) &kp HOME &kp UARW  &kp END    &kp PG_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │ LEFT     │ DOWN     │  RIGHT   │          |   | SCROLLDN │ LEFT     │ DOWN     │ RIGHT    │ PAGE DOWN│
             HRML(DEL,  LARW,      DARW,     RARW)   &trans           &kp LG(PG_DN) &kp LARW &kp DARW   &kp RARW   &kp PG_DN
